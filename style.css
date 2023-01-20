@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
 body {
-    background-color: blue;
+  font-family: 'Poiret One', sans-serif;
+  background-color: blue;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-size: 36px;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+}
+
+p {
+  text-align: center;
+  color: grey;  
+}
+
+span {
+  color: #b22222;
+}
+
+a {
+  color: #9932cc;
+  text-decoration: none;  
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none; 
+}
+
+.footer {
+  font-size: 14px;
+  color: #000000;
+  font-style: italic;   
 }

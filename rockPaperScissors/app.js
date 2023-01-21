@@ -1,21 +1,44 @@
-// Rock, Paper, Scissors Game*
-// We'll create an object for the player and the computer.
 const player = {
   currentChoice: null
 }
 const computer = {
   currentChoice: null
 }
-
-// The choices can go into an array.
 const choices = ["Lapis", "Papyrus", "Scalpellus"];
+// Here's where the player makes their choice. Try changing the index in the line below to test out the conditional!
+player.currentChoice = choices[0];
 
-// To get the computer's choice, we'll create a new variable called randomIndex. The variable will generate a new random number each time the program runs. See how we used choices.length? This makes sure that we're only getting a random numbers that correspond to the length of the array.
-const randomIndex = Math.floor(Math.random() * choices.length);
+// Here, we're wrapping the randomIndex generator, which helps us determine the computer's choice, in a new function called computerChooses
+function computerChooses(){
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  computer.currentChoice = choices[randomIndex];
+}
 
-// Then, we'll update the currentChoice property of the computer object with its choice. We get its choice by accessing the choices array at the randomIndex we generated.
-computer.currentChoice = choices[randomIndex];
+// Here, we're wrapping our conditional logic in a function called compareChoices. The code itself doesn't change, but now we have a function that we can easily invoke later in the program. We'll call the computerChooses function here to generate the computer's random choice.
+function compareChoices(){
+  computerChooses();
+  if(computer.currentChoice === player.currentChoice){
+    console.log("It's a tie! The computer and player both chose " + computer.currentChoice);
+  }else if(computer.currentChoice === choices[0]){
+    if(player.currentChoice === choices[1]){
+      console.log("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }else{
+      console.log("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }
+  }else if(computer.currentChoice === choices[1]){
+    if(player.currentChoice === choices[2]){
+      console.log("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }else{
+      console.log("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }
+  }else if(computer.currentChoice === choices[2]){
+    if(player.currentChoice === choices[0]){
+      console.log("The player wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }else{
+      console.log("The computer wins! The computer chose " + computer.currentChoice + " and the player chose " + player.currentChoice);
+    }
+  }
+}
 
-// Here's a console.log to check our work!
-console.log("The computer chose " + computer.currentChoice);
-
+// Finally, don't forget to invoke the function!
+compareChoices();

@@ -171,3 +171,90 @@ let lasers = 10;
 let enemyHealth = 5;
 
 // Functions in JavaScript:
+function takeDamage() {
+    player.health -= 1;
+    player.damageTaken += 1;
+    player.points -= 100;
+}
+// Call it:
+takeDamage();
+
+// 
+function sayHello() {
+    console.log("Hello!");
+}
+
+sayHello();
+
+// This is DRY code. Because if we want 'americanoTotal()'
+// then this gets too long.
+function latteTotal() {
+  const price = 4.50;
+  const salesTaxRate = .10;
+  const totalAmount = price + (price * salesTaxRate);
+  console.log("The total is $" + totalAmount);
+}
+latteTotal(); // 'The total is $4.95
+
+// Adding parameters:
+function calculateTotal(price, salesTaxRate) {
+   const totalAmount = price + (price * salesTaxRate);
+   console.log("The total is $" + totalAmount);
+}
+calculateTotal(4.50, .10) // Same output as Above*
+
+// Using 'return' instead of 'console.log':
+function calculateTotal(price, salesTaxRate) {
+   return (price + (price * salesTaxRate));
+}
+
+const total = calculateTotal(9.99, .10);
+
+// Global scope:
+const brother = "Phillip";
+
+function sayHello() {
+   console.log("Hello " + brother);
+}
+
+sayHello();   // brother can be accesed here
+
+console.log(brother);   // and brother can be accessed here
+
+// Local scope:
+function sayHello() {
+   const brother = "Phillip";
+   console.log("Hello " + brother);
+};
+
+sayHello();   // brother would be logged here...
+
+console.log(brother);   // but it can’t be accessed on its own here.
+
+// Arrow functions:
+// Older way:
+function calculateTotal(price, salesTaxRate) {
+   return (price + (price * salesTaxRate));
+}
+calculateTotal(4.5, .10);
+
+// Newer way w/ Arrow function:
+const calculateTotal = (price, salesTaxRate) => {
+   return (price + (price * salesTaxRate));
+}
+calculateTotal(4.5, .10);
+
+// another:
+// Old
+function embraceChange() {
+  console.log("Now I'm an arrow function.");
+}
+embraceChange();
+
+// New
+const embraceChange = () => {
+  console.log("Now I'm an arrow function.");
+}
+embraceChange();
+
+// 

@@ -2,7 +2,11 @@
 
 body {
   font-family: 'Poiret One', sans-serif;
-  background-color: blue;
+  margin: auto;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+
 }
 
 h1 {
@@ -12,11 +16,13 @@ h1 {
 }
 
 h2 {
+  margin: 30px auto;
   text-align: center;
   color: black;
 }
 
 p {
+  margin: 30px auto;
   text-align: center;
   color: grey;  
 }
@@ -38,8 +44,46 @@ ul {
   list-style: none; 
 }
 
-.footer {
+p.footer {
   font-size: 14px;
   color: #000000;
   font-style: italic;   
+}
+
+nav li {
+  display: inline;
+  padding: 15px;
+}
+
+nav ul {
+  text-align: center;
+  font-size: 18px;
+  margin: 25px
+}
+
+.social img {
+  width: 30px;
+}
+
+#image-grid img {
+  margin: 5px auto;
+  width: 30%;
+}
+
+header {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+
+header ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  #image-grid img {
+    width: 100%;
+  }
 }

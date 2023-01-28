@@ -257,4 +257,26 @@ const embraceChange = () => {
 }
 embraceChange();
 
+// document.querySelector() and ""All():
+// select the first h1 element
+const h1 = document.querySelector();
+// select the element with the id of company-name
+const companyName = document.querySelector();
+// select the element with the class of sales-pitch
+const salesPitch = document.querySelector();
+// select all paragraph tags
+const allParagraphTags = document.querySelectorAll();
+// select all elements inside of the advertisement div
+const allAdvertisementContent = document.querySelectorAll();
+
+// Getting, Setting, and Removing attributes:
+const h1ID = document.querySelector('h1').getAttribute('id');
+// This would store the ID attribute of the <h1> in the variable called h1ID.
+
+document.querySelector('#title').setAttribute('class', 'blue');
+// This would give the element with the ID of "title" a class of "blue."
+
+document.querySelectorAll('p').removeAttribute('class');
+// This would remove the class attribute from all <p> elements.
+
 // 

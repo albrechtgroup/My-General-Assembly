@@ -50,5 +50,3 @@ function displayResult(result){
 // Don't forget to call the function to make the game run!
 compareChoices();
 
-// 
-

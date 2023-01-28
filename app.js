@@ -279,4 +279,30 @@ document.querySelector('#title').setAttribute('class', 'blue');
 document.querySelectorAll('p').removeAttribute('class');
 // This would remove the class attribute from all <p> elements.
 
-// 
+// Creating a DOM element:
+const paragraph = document.createElement('p');
+paragraph.innerText = "Your passwords did not match.";
+paragraph.setAttribute("class", "registration-error");
+
+// This is what's created: <p class="registration-error">Your passwords did not match.</p>
+
+// addEventListener() method:
+function sayHello() {
+    console.log("Hello!");
+}
+document.querySelector('button').addEventListener('click', sayHello);
+
+// onclick method:
+document.querySelector('#login').onclick = respondToLoginAttempt;
+
+// Vs. addEventListener() method:
+document.querySelector('#login').addEventListener('click', respondToLoginAttempt);
+
+// A key difference is that onclick will overwrite 
+// any previous click listeners on the element, 
+// whereas addEventListener() will preserve existing 
+// listeners. Something else to keep in mind is that
+// onclick is supported on most web browsers, while 
+// addEventListener() is newer and not as universally 
+// supported (looking at you, Internet Explorer).
+

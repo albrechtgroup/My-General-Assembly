@@ -1,12 +1,8 @@
 // alert("General Assembly SON!!!");
-// First Object:
-const simpCharc = {
-  name: "Lisa Simpson",
-  hometown: "Springfield, Oregon",
-  age: 8,
-  isABoss: true,
-  hobbies: ["playing the saxophone", "political causes", "saving the world"]
-};
+let myName = "Jack Reacher";
+let myAge = "unknown";
+let thinkAge = 49;
+let homeTown = "Confidential";
 
 // In Earlier versions, it was standard for JS 
 // statements to "always" end with a semicolon...
@@ -17,10 +13,23 @@ const simpCharc = {
 // Creating and modifying an 'array':
 const favFoods = ["tacos", "pizza", "tortellini"];
 console.log(favFoods); // ["tacos", "pizza", "tortellini"];
+// .push() adds to End of array:
 favFoods.push("fish tacos", "berry smoothies");
 console.log(favFoods);
+// .pop() will 'pop off' the End of array:
 favFoods.pop();
+// Adding New Favorite Recipe to beggiming of array!*
+favFoods.unshift("Quesadilla!");
 console.log(favFoods);
+
+// First Object:
+const simpCharc = {
+  name: "Lisa Simpson",
+  hometown: "Springfield, Oregon",
+  age: 8,
+  isABoss: true,
+  hobbies: ["playing the saxophone", "political causes", "saving the world"]
+};
 
 // Creating and modifying an 'object':
 const aboutMe = {
@@ -29,8 +38,9 @@ const aboutMe = {
   age: 37,
   homes: ["Brooklyn, NY", "Adirondacks, NY"]  
 }
-console.log(aboutMe.homes)
-aboutMe.dreamJob = "Full Stack Engineer"
+console.log(aboutMe.homes);
+console.log(aboutMe.homes[1]); // "Adirondacks, NY"
+aboutMe.dreamJob = "Full Stack Engineer";
 console.log(aboutMe)
 
 // Concatination:

@@ -8,6 +8,12 @@ const simpCharc = {
   hobbies: ["playing the saxophone", "political causes", "saving the world"]
 };
 
+// In Earlier versions, it was standard for JS 
+// statements to "always" end with a semicolon...
+// Newer iterations don't always require them..
+// There are different style-guides governing their
+// use and prob. Company to Company..
+
 // Creating and modifying an 'array':
 const favFoods = ["tacos", "pizza", "tortellini"];
 console.log(favFoods); // ["tacos", "pizza", "tortellini"];

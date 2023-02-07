@@ -47,11 +47,14 @@ console.log(aboutMe)
 console.log("Hello!, My name is " + aboutMe.name + " and I am a " + aboutMe.dreamJob + "!!!")
 
 // Conditionals in programming:
+// 'if' statement:
+let assignmentsCompleted = .87; 
 if (assignmentsCompleted > .80) {
     console.log("Ready to graduate!");
 }
 
-// 'if' statement: 
+let temperature = 43;
+let weather = "raining";
 if (temperature < 60) {
    console.log("Wear a coat!");
 }
@@ -67,9 +70,10 @@ if (assignmentsCompleted > .80) {
 }
 
 // 'if, else if, else':
-if (assignmentsCompleted > .80) {
+let nextAssignment = .77;
+if (nextAssignment > .80) {
     console.log("Ready to graduate!");
-} else if (assignmentsCompleted > .65) {
+} else if (nextAssignment > .65) {
    console.log("Better catch up on your homework!");
 } else {
     console.log("You’ve got a lot of work left to do.");
@@ -103,7 +107,8 @@ if(weather === "snowing" || weather === "raining"){
     console.log("Looks like we need to wear boots today.");
 }
 
-// 'for' loop:
+// 'for' loop: Programmers love for their accuracy and
+// precision.
 for (let i = 0; i < 100; i++) {
   console.log(i);
 }
@@ -114,11 +119,21 @@ for (let i = 0; i < cookies.length; i++) {
     console.log(cookies[i]);
 }
 
-// 'while' loop:
+// 'while' loop: Simpler and cleaner, As long as the 
+// conditional is 'true', the loop continues to run. 
 let number = 0;
 while (number < 11) {
     number = number + 1;
 }
+// CAUTION!*!*!: 'while' loops are easiest to cause 
+// infinite loops!!!
+
+// 'for' or 'while'??
+// If you know exactly how many times the loop should
+// execute, use a 'for' loop for its precision.
+// If you're not sure how many times the loop has to
+// run but you do know when it should stop, us 'while'
+
 
 ///*  PART ONE: CONDITIONALS  *///
 
@@ -130,10 +145,9 @@ const buckledUp = false;
 
 // if () {
 //   console.log("You are not buckled up. Click it or ticket!");
-// }else{
+// } else {
 //   console.log("You buckled up your seat belt. What a safe driver you are!");
 // }
-
 
 // PROBLEM 2
 // Let's negotiate. If the price variable is less than or equal to 5, log the message "I'll take it!"
@@ -142,7 +156,6 @@ const buckledUp = false;
 // For that last statement, fill in the blank with the value of the price variable, i.e. "500 for this? You must be joking!"
 // Try setting the price variable to different values and test out your conditional statements.
 const price = 7.50;
-
 
 // PROBLEM 3 [BONUS]
 // Do I want this bicycle? The kinds of bicycles I want are either:
@@ -168,7 +181,6 @@ let bikePrice = 550;
 // Use a for loop to log how many years it has been and how much the investment is worth for each year.
 let investment = 1000;
 
-
 // PROBLEM 2
 // Use a while loop to count down the days until the finale of your favorite show.
 // For each day, log the message "_____ days until the last episode!"
@@ -176,7 +188,6 @@ let investment = 1000;
 // Instead, log "Only _____ weeks until the last episode!"
 // HINT: You will need to use the modulus (%)
 let daysUntilTheFinale = 30;
-
 
 // PROBLEM 3
 // Firing a laser has a 50% chance of hitting, reducing enemyHealth by 1 each time
@@ -255,10 +266,10 @@ function calculateTotal(price, salesTaxRate) {
 calculateTotal(4.5, .10);
 
 // Newer way w/ Arrow function:
-const calculateTotal = (price, salesTaxRate) => {
+const calculateTotalB = (price, salesTaxRate) => {
    return (price + (price * salesTaxRate));
 }
-calculateTotal(4.5, .10);
+calculateTotalB(4.5, .10);
 
 // another:
 // Old
@@ -268,10 +279,10 @@ function embraceChange() {
 embraceChange();
 
 // New
-const embraceChange = () => {
+const embraceMoreChange = () => {
   console.log("Now I'm an arrow function.");
 }
-embraceChange();
+embraceMoreChange();
 
 // document.querySelector() and ""All():
 // select the first h1 element

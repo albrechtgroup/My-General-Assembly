@@ -1,5 +1,5 @@
 // alert("General Assembly SON!!!");
-let myName = "Jack Reacher";
+let myName = "Sam Fisher";
 let myAge = "unknown";
 let thinkAge = 49;
 let homeTown = "Confidential";
@@ -232,12 +232,13 @@ embraceChangeArrow();
 
 // The DOM = Document Object Model
 // document.querySelector() and ""All():
+// *Practice:
 // select the first h1 element
-const h1 = document.querySelector();
+const h1 = document.querySelector('h1');
 // select the element with the id of company-name
-const companyName = document.querySelector();
+const companyName = document.querySelector('#company-name');
 // select the element with the class of sales-pitch
-const salesPitch = document.querySelector();
+const salesPitch = document.querySelector('.sales-pitch');
 // select all paragraph tags
 const allParagraphTags = document.querySelectorAll();
 // select all elements inside of the advertisement div
@@ -259,6 +260,16 @@ paragraph.innerText = "Your passwords did not match.";
 paragraph.setAttribute("class", "registration-error");
 
 // This is what's created: <p class="registration-error">Your passwords did not match.</p>
+
+// Appending elements:
+// First, we create the element and store it in a variable named newPost
+const newPost = document.createElement("p");
+// Then, we can set properties such as the innerText
+newPost.innerText = "JavaScript can be tough!";
+// Then, we can grab the parent element that we want to attach our new element to
+const postsDiv = document.querySelector("#posts");
+// Finally, we use the appendChild method to add our newPost inside of the postsDiv
+postsDiv.appendChild(newPost);
 
 // addEventListener() method:
 function sayHello() {

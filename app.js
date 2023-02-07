@@ -134,14 +134,15 @@ while (number < 11) {
 // *If you're not sure how many times the loop has to
 // run but you do know when it should stop, use 'while'
 
-// Functions in JavaScript:
-function takeDamage() {
-    player.health -= 1;
-    player.damageTaken += 1;
-    player.points -= 100;
-}
+// Functions in JavaScript: 
+// Example:
+// function takeDamage() {
+//     player.health -= 1;
+//     player.damageTaken += 1;
+//     player.points -= 100;
+// }
 // Invoking or "Calling" the function with ():
-takeDamage();
+// takeDamage();
 
 //
 function sayHello() {
@@ -234,16 +235,16 @@ embraceChangeArrow();
 // The DOM = Document Object Model
 // document.querySelector() and ""All():
 // *Practice:
-// select the first h1 element
-const h1 = document.querySelector('h1');
-// select the element with the id of company-name
-const companyName = document.querySelector('#company-name');
-// select the element with the class of sales-pitch
-const salesPitch = document.querySelector('.sales-pitch');
-// select all paragraph tags
-const allParagraphTags = document.querySelectorAll('p');
-// select all elements inside of the advertisement div
-const allAdvertisementContent = document.querySelectorAll();
+// // select the first h1 element
+// const h1 = document.querySelector('h1');
+// // select the element with the id of company-name
+// const companyName = document.querySelector('#company-name');
+// // select the element with the class of sales-pitch
+// const salesPitch = document.querySelector('.sales-pitch');
+// // select all paragraph tags
+// const allParagraphTags = document.querySelectorAll('p');
+// // select all elements inside of the advertisement div
+// const allAdvertisementContent = document.querySelectorAll();
 
 // Getting, Setting, and Removing attributes:
 const h1ID = document.querySelector('h1').getAttribute('id');

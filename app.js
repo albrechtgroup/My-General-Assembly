@@ -129,73 +129,10 @@ while (number < 11) {
 // infinite loops!!!
 
 // 'for' or 'while'??
-// If you know exactly how many times the loop should
+// *If you know exactly how many times the loop should
 // execute, use a 'for' loop for its precision.
-// If you're not sure how many times the loop has to
+// *If you're not sure how many times the loop has to
 // run but you do know when it should stop, us 'while'
-
-
-///*  PART ONE: CONDITIONALS  *///
-
-// PROBLEM 1
-// Fill in the if statement of this conditional to respond to whether the user is buckledUp or not.
-// Log the first message if buckledUp is false.
-// Otherwise, log the second message.
-const buckledUp = false;
-
-// if () {
-//   console.log("You are not buckled up. Click it or ticket!");
-// } else {
-//   console.log("You buckled up your seat belt. What a safe driver you are!");
-// }
-
-// PROBLEM 2
-// Let's negotiate. If the price variable is less than or equal to 5, log the message "I'll take it!"
-// If the price variable is greater than 5, log the message "Take off 10% and you've got a deal."
-// If the price variable is greater than 10, log the message "_____ for this? You must be joking!"
-// For that last statement, fill in the blank with the value of the price variable, i.e. "500 for this? You must be joking!"
-// Try setting the price variable to different values and test out your conditional statements.
-const price = 7.50;
-
-// PROBLEM 3 [BONUS]
-// Do I want this bicycle? The kinds of bicycles I want are either:
-// a) priced under 250 dollars and blue
-// b) priced over 1000 or a schwinn
-// c) priced between 500-750 and orange (500 and 750 are both valid prices)
-// Write a conditional chain testing the bike variable based on my conditions.
-// If the bike passes these conditions, log "I'd like to ride this <color-of-bike> <brand-of-bike>"
-// Use variables so when you change the bike's name/brand, the message still describes the bike.
-// Try changing the variable values to test our your conditional chain.
-let bikeWheels = 2;
-let bikeColor = "blue";
-let bikeBrand = "trek";
-let bikePrice = 550;
-
-
-///*  PART TWO: LOOPS  *///
-
-// PROBLEM 1
-// You put 1000 dollars into a new cryptocurrency. Good luck!
-// Over ten years, the value of the investment increases by 5% each year.
-// In the seventh year, the investment loses 75% instead of increasing. Eeek!
-// Use a for loop to log how many years it has been and how much the investment is worth for each year.
-let investment = 1000;
-
-// PROBLEM 2
-// Use a while loop to count down the days until the finale of your favorite show.
-// For each day, log the message "_____ days until the last episode!"
-// If the daysUntilTheFinale is evenly divisible by 7, don't log the above message.
-// Instead, log "Only _____ weeks until the last episode!"
-// HINT: You will need to use the modulus (%)
-let daysUntilTheFinale = 30;
-
-// PROBLEM 3
-// Firing a laser has a 50% chance of hitting, reducing enemyHealth by 1 each time
-// Use Math.random() to determine whether the laser was successful or not
-// Continue firing lasers (subtract one from the lasers variable) until the enemyHealth is 0 or lasers is 0
-// Each time, log how many lasers are left, and how much enemyHealth remains
-let lasers = 10;
-let enemyHealth = 5;
 
 // Functions in JavaScript:
 function takeDamage() {
@@ -203,18 +140,16 @@ function takeDamage() {
     player.damageTaken += 1;
     player.points -= 100;
 }
-// Call it:
+// Invoking or "Calling" the function with ():
 takeDamage();
 
-// 
+//
 function sayHello() {
     console.log("Hello!");
 }
-
 sayHello();
 
-// This is DRY code. Because if we want 'americanoTotal()'
-// then this gets too long.
+//
 function latteTotal() {
   const price = 4.50;
   const salesTaxRate = .10;
@@ -224,6 +159,7 @@ function latteTotal() {
 latteTotal(); // 'The total is $4.95
 
 // Adding parameters:
+// 'price' and 'salesTaxRate' are parameters
 function calculateTotal(price, salesTaxRate) {
    const totalAmount = price + (price * salesTaxRate);
    console.log("The total is $" + totalAmount);
@@ -231,12 +167,21 @@ function calculateTotal(price, salesTaxRate) {
 calculateTotal(4.50, .10) // Same output as Above*
 
 // Using 'return' instead of 'console.log':
+// Now, we can use the result of the function
 function calculateTotal(price, salesTaxRate) {
    return (price + (price * salesTaxRate));
 }
-
+// '9.99' and '.10' are arguements
 const total = calculateTotal(9.99, .10);
 
+// Scope!
+// "Globally" scoped variables aren't declared inside 
+// of any code block, and are available anywhere in the 
+// program. "Locally" scoped variables are only available 
+// inside of the code block they're declared within. A 
+// let i = 0 declaration inside of a for loop is 
+// a classic example– you won't be able to access that 
+// particular i variable outside of the for loop.
 // Global scope:
 const brother = "Phillip";
 
@@ -244,19 +189,20 @@ function sayHello() {
    console.log("Hello " + brother);
 }
 
-sayHello();   // brother can be accesed here
-
-console.log(brother);   // and brother can be accessed here
+sayHello(); // brother can be accesed here
+console.log(brother); // and brother can be accessed here
 
 // Local scope:
+// Defined in the {
+//    block of code
+// }
 function sayHello() {
    const brother = "Phillip";
    console.log("Hello " + brother);
 };
 
-sayHello();   // brother would be logged here...
-
-console.log(brother);   // but it can’t be accessed on its own here.
+sayHello(); // brother would be logged here...
+console.log(brother); // but it can’t be accessed on its own here.
 
 // Arrow functions:
 // Older way:
@@ -266,10 +212,10 @@ function calculateTotal(price, salesTaxRate) {
 calculateTotal(4.5, .10);
 
 // Newer way w/ Arrow function:
-const calculateTotalB = (price, salesTaxRate) => {
+const calculateTotalArrow = (price, salesTaxRate) => {
    return (price + (price * salesTaxRate));
 }
-calculateTotalB(4.5, .10);
+calculateTotalArrow(4.5, .10);
 
 // another:
 // Old
@@ -278,12 +224,13 @@ function embraceChange() {
 }
 embraceChange();
 
-// New
-const embraceMoreChange = () => {
+// New w/ arrow function:
+const embraceChangeArrow = () => {
   console.log("Now I'm an arrow function.");
 }
-embraceMoreChange();
+embraceChangeArrow();
 
+// The DOM = Document Object Model
 // document.querySelector() and ""All():
 // select the first h1 element
 const h1 = document.querySelector();
@@ -333,3 +280,36 @@ document.querySelector('#login').addEventListener('click', respondToLoginAttempt
 // addEventListener() is newer and not as universally 
 // supported (looking at you, Internet Explorer).
 
+
+// CODE PEN:
+// PROBLEM 1
+// Write a function that accepts one parameter - a name - and logs "Hello I am _____"
+// Fill in the blank with the name given to the function
+
+
+// PROBLEM 2
+// Modify this function to accept two parameters, representing two numbers you want to multiply.
+// Then, add a code block that will multiply the two parameters and return the output.
+// The code block below the function is meant to check your work for the arguments 2 and 2.
+function multiply(){
+  //your code here
+}
+
+const four = multiply(2, 2);
+if(four === 4){
+  console.log("The multiply function works!");
+}else{
+  console.log("Something's wrong with the multiply function!")
+}
+
+
+// PROBLEM 3
+// Write a function that accepts an array as a parameter.
+// The function should loop through the given array and console.log each element in the array.
+// Create your own array to test your work.
+
+
+// PROBLEM 4
+// Write a function that finds the maximum number in a given array.
+// Loop through the array and keep track of the biggest number seen so far.
+// Once the loop is over, return the biggest number in the array.
